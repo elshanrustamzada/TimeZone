@@ -278,3 +278,8 @@ C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Time
 C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\ref\TimeZone.dll
 C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razor\Views\Shared\Components\Header\Default.cshtml.g.cs
 C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razor\Views\Shared\Components\Footer\Default.cshtml.g.cs
+C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_AdminLayout.cshtml.g.cs
+C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razor\Areas\Admin\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
