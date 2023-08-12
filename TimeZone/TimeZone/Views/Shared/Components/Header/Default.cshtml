@@ -1,0 +1,46 @@
+﻿
+@model Header
+
+
+<div class="header-area">
+    <div class="main-header header-sticky">
+        <div class="container-fluid">
+            <div class="menu-wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <a asp-controller="Home" asp-action="Index"><img src="assets/img/logo/@Model.HeaderLogo" alt=""></a>
+                </div>
+                <!-- Main-menu -->
+                <div class="main-menu d-none d-lg-block">
+                    <nav>
+                        <ul id="navigation">
+                            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                            <li><a asp-controller="Shop" asp-action="Index">Shop</a></li>
+                            <li><a asp-controller="About" asp-action="Index">About</a></li>
+                            <li> <a asp-controller="Blogs" asp-action="Index">Blogs</a></li>
+                            <li><a asp-controller="Login" asp-action="Index">Login</a></li>
+                            <li><a asp-controller="Cart" asp-action="Index">Cart</a></li>
+                            <li><a asp-controller="Contact" asp-action="Index">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Header Right -->
+                <div class="header-right">
+                    <ul>
+                        <li>
+                            <div class="nav-search search-switch">
+                                <span class="flaticon-search"></span>
+                            </div>
+                        </li>
+                        <li> <a asp-controller="Login" asp-action="Index"><span class="flaticon-user"></span></a></li>
+                        <li><a asp-controller="Cart" asp-action="Index"><span class="flaticon-shopping-cart"></span></a> </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="col-12">
+                <div class="mobile_menu d-block d-lg-none"></div>
+            </div>
+        </div>
+    </div>
+</div>
