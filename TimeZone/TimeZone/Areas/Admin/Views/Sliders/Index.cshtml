@@ -1,0 +1,35 @@
+﻿
+<div class="col-md-12 my-4">
+    <div class="card shadow">
+        <div class="card-body">
+            <div class="d-flex justify-content-between">
+                <h5 class="card-title">Sliders</h5>
+                <a class="btn btn-primary text-white mb-2" asp-action="Create">Create</a>
+            </div>
+            <table class="table table-bordered table-hover mb-0">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th class="text-right">Actions</th>
+                      
+                    </tr>
+                </thead>
+                <tbody>
+                 @foreach (Slider item in Model)
+                    {
+                        <tr>
+                            <td>@item.Title</td>
+                            <td class="d-flex justify-content-end">
+                                <a class="btn btn-warning text-white mr-2">Detail</a>
+                                <a class="btn btn-info text-white mr-2">Update</a>
+                                <a class="btn btn-danger text-white mr-2">Delete</a>
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
