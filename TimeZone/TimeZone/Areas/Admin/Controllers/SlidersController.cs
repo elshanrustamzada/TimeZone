@@ -85,11 +85,55 @@ namespace TimeZone.Areas.Admin.Controllers
             dbslider.Description = slider.Description;
             await _db.SaveChangesAsync();
             return RedirectToAction("Index");
+        }
+        #endregion
+
+        #region Delete
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            Slider dbslider = await _db.Sliders.FirstOrDefaultAsync(x => x.Id == id);
+            if (dbslider == null)
+            {
+                return BadRequest();
+            }
+            return View(dbslider);
+        }
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeletePost(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            Slider dbslider = await _db.Sliders.FirstOrDefaultAsync(x => x.Id == id);
+            if (dbslider == null)
+            {
+                return BadRequest();
+            }
+            dbslider.IsDeactive = true;
+            await _db.SaveChangesAsync();
+            return RedirectToAction("Index");
         } 
         #endregion
 
-
-
+        public async Task<IActionResult> Detail(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            Slider dbslider= await _db.Sliders.FirstOrDefaultAsync(x => x.Id == id);
+            if (dbslider == null)
+            {
+                return BadRequest();
+            }
+            return  View(dbslider);
+        }
 
     }
 }

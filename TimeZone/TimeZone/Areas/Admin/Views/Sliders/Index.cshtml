@@ -10,15 +10,26 @@
                 <thead>
                     <tr>
                         <th>Title</th>
+                        <th>Status</th>
                         <th class="text-right">Actions</th>
-                      
+
                     </tr>
                 </thead>
                 <tbody>
-                 @foreach (Slider item in Model)
+                    @foreach (Slider item in Model)
                     {
                         <tr>
                             <td>@item.Title</td>
+                            <td>
+                                @if (!item.IsDeactive)
+                                {
+                                    <span class="badge badge-pill badge-success text-white">Aktiv</span>
+                                }
+                                else
+                                {
+                                    <span class="badge badge-pill badge-danger">Passiv</span>
+                                }
+                            </td>
                             <td class="d-flex justify-content-end">
                                 <a class="btn btn-warning text-white mr-2" asp-action="Detail" asp-route-id="@item.Id">Detail</a>
                                 <a class="btn btn-info text-white mr-2" asp-action="Update" asp-route-id="@item.Id">Update</a>
