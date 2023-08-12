@@ -285,3 +285,4 @@ C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razo
 C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razor\Areas\Admin\Views\Sliders\Index.cshtml.g.cs
 C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razor\Areas\Admin\Views\Sliders\Create.cshtml.g.cs
+C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razor\Areas\Admin\Views\Sliders\Update.cshtml.g.cs
