@@ -9,9 +9,10 @@
             <table class="table table-bordered table-hover mb-0">
                 <thead>
                     <tr>
-                        <th>Title</th>
-                        <th>Status</th>
-                        <th class="text-right">Actions</th>
+                        <th class="text-dark font-weight-bold">Image</th>
+                        <th class="text-dark font-weight-bold">Title</th>
+                        <th class="text-dark font-weight-bold">Status</th>
+                        <th class="text-dark font-weight-bold text-right">Actions</th>
 
                     </tr>
                 </thead>
@@ -19,6 +20,9 @@
                     @foreach (Slider item in Model)
                     {
                         <tr>
+                            <td>
+                                <img src="~/assets/img/hero/@item.Image" style="width:200px;height:80px;object-fit:cover" />
+                            </td>
                             <td>@item.Title</td>
                             <td>
                                 @if (!item.IsDeactive)
