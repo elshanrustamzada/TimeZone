@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using TimeZone.DAL;
+using TimeZone.Helper;
 using TimeZone.Models;
 
 namespace TimeZone.Areas.Admin.Controllers
@@ -30,14 +31,16 @@ namespace TimeZone.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Slider slider)
         {
-            #region isExist
-            bool isExist = await _db.Sliders.AnyAsync(x => x.Title == slider.Title);
-            if (isExist)
+            if (slider.Photo == null)
             {
-                ModelState.AddModelError("Title", "This slider is already exist");
+                ModelState.AddModelError("Photo", "Image can not be null");
                 return View();
             }
-            #endregion
+            if (!slider.Photo.IsImage())
+            {
+                ModelState.AddModelError("Photo", "Please select image type");
+                return View();
+            }
 
             await _db.Sliders.AddAsync(slider);
             await _db.SaveChangesAsync();
@@ -118,22 +121,24 @@ namespace TimeZone.Areas.Admin.Controllers
             dbslider.IsDeactive = true;
             await _db.SaveChangesAsync();
             return RedirectToAction("Index");
-        } 
+        }
         #endregion
 
+        #region Detail
         public async Task<IActionResult> Detail(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
-            Slider dbslider= await _db.Sliders.FirstOrDefaultAsync(x => x.Id == id);
+            Slider dbslider = await _db.Sliders.FirstOrDefaultAsync(x => x.Id == id);
             if (dbslider == null)
             {
                 return BadRequest();
             }
-            return  View(dbslider);
+            return View(dbslider);
         }
+        #endregion
 
     }
 }
