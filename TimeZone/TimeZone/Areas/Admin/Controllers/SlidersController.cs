@@ -124,6 +124,29 @@ namespace TimeZone.Areas.Admin.Controllers
         }
         #endregion
 
+        public async Task<IActionResult> Activity(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            Slider dbslider = await _db.Sliders.FirstOrDefaultAsync(x => x.Id == id);
+            if (dbslider == null)
+            {
+                return BadRequest();
+            }
+            if (dbslider.IsDeactive)
+            {
+                dbslider.IsDeactive = false;
+            }
+            else
+            {
+                dbslider.IsDeactive = true;
+            }
+            await _db.SaveChangesAsync();
+            return RedirectToAction("Index");
+        }
+
         #region Detail
         public async Task<IActionResult> Detail(int? id)
         {
