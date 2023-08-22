@@ -53,7 +53,7 @@ namespace TimeZone.Areas.Admin.Controllers
                 return View();
             }
             string folder = Path.Combine(_env.WebRootPath, "img", "hero");
-            slider.Image = await slider.Photo.SaveFileAsync(folder); 
+            slider.Image = await slider.Photo.SaveFileAsync(folder);
             #endregion
 
             await _db.Sliders.AddAsync(slider);
@@ -89,13 +89,29 @@ namespace TimeZone.Areas.Admin.Controllers
             {
                 return BadRequest();
             }
-            #region isExist
-            bool isExist = await _db.Sliders.AnyAsync(x => x.Title == slider.Title && x.Id != id);
-            if (isExist)
+
+            #region Save Image
+            if (slider.Photo != null)
             {
-                ModelState.AddModelError("Title", "This slider is already exist");
-                return View();
+                if (!slider.Photo.IsImage())
+                {
+                    ModelState.AddModelError("Photo", "Please select image type");
+                    return View();
+                }
+                if (slider.Photo.IsOlder1Mb())
+                {
+                    ModelState.AddModelError("Photo", "max 1mb");
+                    return View();
+                }
+                string folder = Path.Combine(_env.WebRootPath, "assets", "img","hero");
+                string path = Path.Combine(folder, dbslider.Image);
+                if (System.IO.File.Exists(path))
+                {
+                    System.IO.File.Delete(path);
+                }
+                dbslider.Image = await slider.Photo.SaveFileAsync(folder);
             }
+
             #endregion
 
             dbslider.Title = slider.Title;
@@ -127,7 +143,7 @@ namespace TimeZone.Areas.Admin.Controllers
             }
             await _db.SaveChangesAsync();
             return RedirectToAction("Index");
-        } 
+        }
         #endregion
 
         #region Detail
