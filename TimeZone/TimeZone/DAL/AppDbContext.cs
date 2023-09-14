@@ -12,6 +12,7 @@ namespace TimeZone.DAL
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Header> Header { get; set; }
         public DbSet<Footer> Footer { get; set; }
+        public DbSet<Product> Products { get; set; }
 
     }
 }

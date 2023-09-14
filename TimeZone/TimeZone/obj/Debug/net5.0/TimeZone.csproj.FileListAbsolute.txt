@@ -264,7 +264,6 @@ C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razo
 C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razor\Views\Login\Index.cshtml.g.cs
 C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razor\Views\Shop\Index.cshtml.g.cs
 C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\TimeZone.RazorTargetAssemblyInfo.cache
@@ -287,3 +286,5 @@ C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razo
 C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razor\Areas\Admin\Views\Sliders\Create.cshtml.g.cs
 C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razor\Areas\Admin\Views\Sliders\Update.cshtml.g.cs
 C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razor\Areas\Admin\Views\Sliders\Detail.cshtml.g.cs
+C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razor\Views\Products\Index.cshtml.g.cs
+C:\Users\elsha\OneDrive\Desktop\TimeZone\TimeZone\TimeZone\obj\Debug\net5.0\Razor\Views\Shared\_ProductsLoadMorePartial.cshtml.g.cs
