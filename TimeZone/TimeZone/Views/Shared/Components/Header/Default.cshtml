@@ -1,5 +1,4 @@
-﻿
-@model Header
+﻿@model Header
 
 
 <div class="header-area">
@@ -25,13 +24,16 @@
                 <!-- Header Right -->
                 <div class="header-right">
                     <ul>
-                        <li>
-                            <div class="nav-search search-switch">
-                                <span class="flaticon-search"></span>
-                            </div>
-                        </li>
-                        <li> <a asp-controller="Account" asp-action="Login"><span class="flaticon-user"></span></a></li>
-                        <li><a asp-controller="Account" asp-action="Register"><span class="flaticon-user"></span></a> </li>
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <li> <a asp-controller="Account" asp-action="Login"><span>Login</span></a></li>
+                            <li><a asp-controller="Account" asp-action="Register"><span>Signup</span></a> </li>
+                        }
+                        else
+                        {
+                            <li> <a><span>@User.Identity.Name</span></a></li>
+                            <li> <a asp-controller="Account" asp-action="Logout"><span>Logout</span></a></li>
+                        }
                     </ul>
                 </div>
             </div>
