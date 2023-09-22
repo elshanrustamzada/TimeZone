@@ -4,15 +4,16 @@ namespace TimeZone.Controllers
 {
     public class AccountController : Controller
     {
-        public IActionResult Login()
-        {
-            return View();
-        }
-        public IActionResult Cart()
+        public IActionResult Register()
         {
             return View();
         }
 
+        public IActionResult Login()
+        {
+            return View();
+        }
+       
 
     }
 }
