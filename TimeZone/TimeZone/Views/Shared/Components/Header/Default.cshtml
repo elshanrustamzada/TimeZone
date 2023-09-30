@@ -18,6 +18,7 @@
                             <li> <a asp-controller="Blogs" asp-action="Index">Blogs</a></li>
                             <li><a asp-controller="About" asp-action="Index">About</a></li>
                             <li><a asp-controller="Contact" asp-action="Index">Contact</a></li>
+                            <li><a asp-controller="Email" asp-action="SendEmail">Email</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -31,8 +32,16 @@
                         }
                         else
                         {
-                            <li> <a><span>@User.Identity.Name</span></a></li>
-                            <li> <a asp-controller="Account" asp-action="Logout"><span>Logout</span></a></li>
+                            if (!User.IsInRole("Admin"))
+                            {
+                                <li> <a><span>@User.Identity.Name</span></a></li>
+                                <li> <a asp-controller="Account" asp-action="Logout"><span>Logout</span></a></li>
+                            }
+                            else
+                            {
+                                <li> <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index"><span>@User.Identity.Name</span></a></li>
+                                <li> <a asp-controller="Account" asp-action="Logout"><span>Logout</span></a></li>
+                            }
                         }
                     </ul>
                 </div>
